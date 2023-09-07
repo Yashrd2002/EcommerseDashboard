@@ -22,14 +22,14 @@ const Orders = () => {
             <div>{o.country}</div>
             <div>{o.address}</div>
             <div className="border-2">
-              {o.line_items.map((l) => (
+              {/* {o.line_items.map((l) => (
                 <div className="flex gap-4">
                   <div>{l.quantity}</div>
                   <div>{l.price_data.currency}</div>
                   <div>{l.price_data.currency.name}</div>
                   <div>{l.price_data.unit_amount}</div>
                 </div>
-              ))}
+              ))} */}
             </div>
           </div>
         ))}

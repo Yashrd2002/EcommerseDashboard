@@ -93,7 +93,7 @@ const NewProduct = () => {
                 </label>
                 <div className="flex w-24 h-24">
                   {images?.map((img) => (
-                    <img src={img} alt="..." />
+                    <img src={img} alt="..." key={img}/>
                   ))}
                 </div>
               </div>

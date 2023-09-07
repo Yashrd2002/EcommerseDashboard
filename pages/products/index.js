@@ -42,7 +42,7 @@ const Products = () => {
               </tr>
             </thead>
             {products.map((p) => (
-              <tbody>
+              <tbody key={p._id}>
                 <tr class="border-b dark:border-neutral-500">
                   <td class="whitespace-nowrap py-4">{p.title}</td>
                   <td class="whitespace-nowrap py-4">{p.price}</td>

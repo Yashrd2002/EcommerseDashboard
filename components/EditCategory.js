@@ -20,7 +20,7 @@ const EditCategory = ({ setPopup,c,cat }) => {
         >
           <option value="">No Parent Category</option>
           {cat?.map((c) => (
-            <option value={c._id}>{c.name}</option>
+            <option value={c._id} key={c._id}>{c.name}</option>
           ))}
         </select>
         <button onClick={() => setPopup(false)}>Hi</button>
