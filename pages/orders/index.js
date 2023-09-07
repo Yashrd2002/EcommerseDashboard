@@ -14,7 +14,7 @@ const Orders = () => {
       <div>Orders</div>
       <div>
         {orders.map((o) => (
-          <div className="flex gap-4">
+          <div className="flex gap-4" key={o._id}>
             <div>{(new Date(o.createdAt)).toLocaleString()}</div>
             <div>{o.name}</div>
             <div>{o.email}</div>
