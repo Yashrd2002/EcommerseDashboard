@@ -116,7 +116,7 @@ const NewProduct = () => {
             >
               <option value="">No Category</option>
               {cat.map((c) => (
-                <option value={c._id}>{c.name}</option>
+                <option value={c._id} key={c._id}>{c.name}</option>
               ))}
             </select>
             {propertiesToFill.length > 0 &&

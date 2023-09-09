@@ -11,11 +11,9 @@ const Products = () => {
   useEffect(() => {
     axios.get("/api/products").then((res) => {
       setProducts(res.data);
-      console.log(res.data);
+
     });
   }, []);
-  console.log(products);
-  
   return (
     <Layout>
       <div className="flex flex-col">
@@ -29,24 +27,24 @@ const Products = () => {
         </div>
 
 
-          <table class=" w-8/12 text-left text-sm font-light">
-            <thead class="border-b font-medium dark:border-neutral-500">
+          <table className=" w-8/12 text-left text-sm font-light">
+            <thead className="border-b font-medium dark:border-neutral-500">
               <tr>
-                <th scope="col" class="py-4">
+                <th scope="col" className="py-4">
                   Product Name
                 </th>
-                <th scope="col" class="py-4">
+                <th scope="col" className="py-4">
                   Price(in Rs)
                 </th>
-                <th scope="col" class="py-4"></th>
+                <th scope="col" className="py-4"></th>
               </tr>
             </thead>
             {products.map((p) => (
               <tbody key={p._id}>
-                <tr class="border-b dark:border-neutral-500">
-                  <td class="whitespace-nowrap py-4">{p.title}</td>
-                  <td class="whitespace-nowrap py-4">{p.price}</td>
-                  <td class="whitespace-nowrap py-4 flex gap-3">
+                <tr className="border-b dark:border-neutral-500">
+                  <td className="whitespace-nowrap py-4">{p.title}</td>
+                  <td className="whitespace-nowrap py-4">{p.price}</td>
+                  <td className="whitespace-nowrap py-4 flex gap-3">
                     <Link href={`/products/edit/${p._id}`} className="border-2 flex p-1 w-20 border-[#5C73DB] rounded-lg items-center justify-center px-3 gap-2">
                       <LuEdit3 /><p>Edit</p>
                     </Link>
